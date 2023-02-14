@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Formularios de Base de Datos</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+  <style>
+    body {
+      background-color: #333;
+      color: aliceblue;
+    }
+    .container {
+      margin-top: 50px;
+    }
+    
+    .form-container {
+      display: none; 
+    }
+        
+    
+  </style>
+<script src="logica.js"></script>
+</head>
+
+<body>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12 text-center">
+        <h1>Formularios de Base de Datos</h1>
+        <div class="btn-group" role="group">
+          <button type="button" class="btn btn-primary" onclick="mostrarFormulario('form-medicos')">Médicos</button>
+          <button type="button" class="btn btn-primary" onclick="mostrarFormulario('form-citas')">Citas</button>
+          <button type="button" class="btn btn-primary" onclick="mostrarFormulario('form-examenes')">Exámenes</button>
+          <button type="button" class="btn btn-primary" onclick="mostrarFormulario('form-resultados')">Resultados de Exámenes</button>
+          <button type="button" class="btn btn-primary" onclick="mostrarFormulario('form-habitaciones')">Habitaciones</button>
+          <button type="button" class="btn btn-primary" onclick="mostrarFormulario('form-hospitalizaciones')">Hospitalizaciones</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="row mt-4">
+      <div class="col-md-12">
+        <div id="form-medicos" class="form-container">
+          <h2>Formulario de Médicos</h2>
+          <form>
+            <div class="form-group">
+              <label for="idMedico">ID de Médico</label>
+              <input type="text" class="form-control" id="idMedico" placeholder="Introduce el ID de Médico">
+            </div>
+            <div class="form-group">
+              <label for="nombre">Nombre</label>
+              <input type="text" class="form-control" id="nombre" placeholder="Introduce el nombre del médico">
+            </div>
+            <div class="form-group">
+              <label for="apellido">Apellido</label>
+              <input type="text" class="form-control" id="apellido" placeholder="Introduce el apellido del médico">
+            </div>
+            <div class="form-group">
+              <label for="especialidad">Especialidad</label>
+              <input type="text" class="form-control" id="especialidad" placeholder="Introduce la especialidad del médico">
+            </div>
+            <button type="submit" class="btn btn-primary">Enviar</button>
+          </form>
+        </div>
+
+        <div id="form-citas" class="form-container">
+            <h2>Formulario de Citas</h2>
+            <form>
+              <div class="form-group">
+                <label for="idCita">ID de Cita</label>
+                <input type="text" class="form-control" id="idCita" placeholder="Introduce el ID de Cita">
+              </div>
+              <div class="form-group">
+                <label for="fecha">Fecha</label>
+                <input type="date" class="form-control" id="fecha">
+              </div>
+              <div class="form-group">
+                <label for="hora">Hora</label>
+                <input type="time" class="form-control" id="hora">
+              </div>
+              <div class="form-group">
+                <label for="idPaciente">ID de Paciente</label>
+                <input type="text" class="form-control" id="idPaciente" placeholder="Introduce el ID de Paciente">
+              </div>
+              <div class="form-group">
+                <label for="idMedico">ID de Médico</label>
+                <input type="text" class="form-control" id="idMedico" placeholder="Introduce el ID de Médico">
+              </div>
+              <button type="submit" class="btn btn-primary">Enviar</button>
+            </form>
+          </div>
+  
+          <div id="form-examenes" class="form-container">
+            <h2>Formulario de Exámenes</h2>
+            <form>
+              <div class="form-group">
+                <label for="idExamen">ID de Examen</label>
+                <input type="text" class="form-control" id="idExamen" placeholder="Introduce el ID de Examen">
+              </div>
+              <div class="form-group">
+                <label for="nombre">Nombre</label>
+                <input type="text" class="form-control" id="nombre" placeholder="Introduce el nombre del examen">
+              </div>
+              <div class="form-group">
+                <label for="descripcion">Descripción</label>
+                <textarea class="form-control" id="descripcion" rows="3"></textarea>
+              </div>
+              <div class="form-group">
+                <label for="costo">Costo</label>
+                <input type="text" class="form-control" id="costo" placeholder="Introduce el costo del examen">
+              </div>
+              <button type="submit" class="btn btn-primary">Enviar</button>
+            </form>
+          </div>
+  
+         
+
+          <div id="form-resultados" class="form-container">
+            <h2>Formulario de Resultados de Exámenes</h2>
+            <form>
+              <div class="form-group">
+                <label for="idResultado">ID de Resultado</label>
+                <input type="text" class="form-control" id="idResultado" placeholder="Introduce el ID de Resultado">
+              </div>
+              <div class="form-group">
+                <label for="idExamen">ID de Examen</label>
+                <input type="text" class="form-control" id="idExamen" placeholder="Introduce el ID de Examen">
+              </div>
+              <div class="form-group">
+                <label for="idPaciente">ID de Paciente</label>
+                <input type="text" class="form-control" id="idPaciente" placeholder="Introduce el ID de Paciente">
+              </div>
+              <div class="form-group">
+                <label for="resultado">Resultado</label>
+                <textarea class="form-control" id="resultado" rows="3"></textarea>
+              </div>
+              <div class="form-group">
+                <label for="fecha">Fecha</label>
+                <input type="date" class="form-control" id="fecha">
+              </div>
+              <button type="submit" class="btn btn-primary">Enviar</button>
+            </form>
+          </div>
+  
+          <div id="form-habitaciones" class="form-container">
+            <h2>Formulario de Habitaciones</h2>
+            <form>
+              <div class="form-group">
+                <label for="idHabitacion">ID de Habitación</label>
+                <input type="text" class="form-control" id="idHabitacion" placeholder="Introduce el ID de Habitación">
+              </div>
+              <div class="form-group">
+                <label for="numero">Número</label>
+                <input type="text" class="form-control" id="numero" placeholder="Introduce el número de la habitación">
+              </div>
+              <div class="form-group">
+                <label for="tipo">Tipo</label>
+                <select class="form-control" id="tipo">
+                  <option>Habitación individual</option>
+                  <option>Habitación doble</option>
+                  <option>Habitación triple</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="precio">Precio</label>
+                <input type="text" class="form-control" id="precio" placeholder="Introduce el precio de la habitación">
+              </div>
+              <button type="submit" class="btn btn-primary">Enviar</button>
+            </form>
+          </div>
+  
+          <div id="form-hospitalizaciones" class="form-container">
+            <h2>Formulario de Hospitalizaciones</h2>
+            <form>
+              <div class="form-group">
+                <label for="idHospitalizacion">ID de Hospitalización</label>
+                <input type="text" class="form-control" id="idHospitalizacion" placeholder="Introduce el ID de Hospitalización">
+              </div>
+              <div class="form-group">
+                <label for="idPaciente">ID de Paciente</label>
+                <input type="text" class="form-control" id="idPaciente" placeholder="Introduce el ID de Paciente">
+              </div>
+          
+                <div class="form-group">
+                    <label for="idHabitacion">ID de Habitación</label>
+                    <input type="text" class="form-control" id="idHabitacion" placeholder="Introduce el ID de Habitación">
+                  </div>
+                  <div class="form-group">
+                    <label for="fechaEntrada">Fecha de Entrada</label>
+                    <input type="date" class="form-control" id="fechaEntrada">
+                  </div>
+                  <div class="form-group">
+                    <label for="fechaSalida">Fecha de Salida</label>
+                    <input type="date" class="form-control" id="fechaSalida">
+                  </div>
+                  <button type="submit" class="btn btn-primary">Enviar</button>
+                </form>
+              </div>
+            </div>
+      
+      
+          </div>
+        </body>
+        
+      </html>
+      
+
