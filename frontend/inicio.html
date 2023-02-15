@@ -150,7 +150,9 @@
                             <input type="text" class="form-control" id="id_medico_cita"
                                 placeholder="Introduce el ID de Médico">
                         </div>
-                        <button type="submit" class="btn btn-primary">Enviar</button>
+                        <button type="button" onclick="insertarDatoscitas()"  class="btn btn-primary">Insertar Datos</button>
+                        <button type="button" onclick="actualizarDatoscitas()" class="btn btn-primary">Actualizar Datos</button>
+                        <button type="button" onclick="borrarDatoscitas()" class="btn btn-primary">Borrar por ID</button>
                     </form>
                 </div>
 
@@ -159,24 +161,26 @@
                     <form>
                         <div class="form-group">
                             <label for="idExamen">ID de Examen</label>
-                            <input type="text" class="form-control" id="idExamen"
+                            <input type="text" class="form-control" id="id_examen"
                                 placeholder="Introduce el ID de Examen">
                         </div>
                         <div class="form-group">
                             <label for="nombre">Nombre</label>
-                            <input type="text" class="form-control" id="nombre"
+                            <input type="text" class="form-control" id="nombre_examen"
                                 placeholder="Introduce el nombre del examen">
                         </div>
                         <div class="form-group">
                             <label for="descripcion">Descripción</label>
-                            <textarea class="form-control" id="descripcion" rows="3"></textarea>
+                            <textarea class="form-control" id="descripcion_examen" rows="3"></textarea>
                         </div>
                         <div class="form-group">
                             <label for="costo">Costo</label>
-                            <input type="text" class="form-control" id="costo"
+                            <input type="text" class="form-control" id="costo_examen"
                                 placeholder="Introduce el costo del examen">
                         </div>
-                        <button type="submit" class="btn btn-primary">Enviar</button>
+                        <button type="button" onclick="insertarDatosexamenes()"  class="btn btn-primary">Insertar Datos</button>
+                        <button type="button" onclick="actualizarDatosexamenes()" class="btn btn-primary">Actualizar Datos</button>
+                        <button type="button" onclick="borrarDatosexamenes()" class="btn btn-primary">Borrar por ID</button>
                     </form>
                 </div>
 
@@ -187,17 +191,17 @@
                     <form>
                         <div class="form-group">
                             <label for="idResultado">ID de Resultado</label>
-                            <input type="text" class="form-control" id="idResultado"
+                            <input type="text" class="form-control" id="id_resultado"
                                 placeholder="Introduce el ID de Resultado">
                         </div>
                         <div class="form-group">
                             <label for="idExamen">ID de Examen</label>
-                            <input type="text" class="form-control" id="idExamen"
+                            <input type="text" class="form-control" id="id_examen_resultado"
                                 placeholder="Introduce el ID de Examen">
                         </div>
                         <div class="form-group">
                             <label for="idPaciente">ID de Paciente</label>
-                            <input type="text" class="form-control" id="idPaciente"
+                            <input type="text" class="form-control" id="id_paciente_resultado"
                                 placeholder="Introduce el ID de Paciente">
                         </div>
                         <div class="form-group">
@@ -206,9 +210,11 @@
                         </div>
                         <div class="form-group">
                             <label for="fecha">Fecha</label>
-                            <input type="date" class="form-control" id="fecha">
+                            <input type="date" class="form-control" id="fecha_resultado">
                         </div>
-                        <button type="submit" class="btn btn-primary">Enviar</button>
+                        <button type="button" onclick="insertarDatosResultados()"  class="btn btn-primary">Insertar Datos</button>
+                        <button type="button" onclick="actualizarDatosResultados()" class="btn btn-primary">Actualizar Datos</button>
+                        <button type="button" onclick="borrarDatosResultados()" class="btn btn-primary">Borrar por ID</button>
                     </form>
                 </div>
 
@@ -217,17 +223,17 @@
                     <form>
                         <div class="form-group">
                             <label for="idHabitacion">ID de Habitación</label>
-                            <input type="text" class="form-control" id="idHabitacion"
+                            <input type="text" class="form-control" id="id_habitacion"
                                 placeholder="Introduce el ID de Habitación">
                         </div>
                         <div class="form-group">
                             <label for="numero">Número</label>
-                            <input type="text" class="form-control" id="numero"
+                            <input type="text" class="form-control" id="numero_habitacion"
                                 placeholder="Introduce el número de la habitación">
                         </div>
                         <div class="form-group">
                             <label for="tipo">Tipo</label>
-                            <select class="form-control" id="tipo">
+                            <select class="form-control" id="tipo_habitacion">
                                 <option>Habitación individual</option>
                                 <option>Habitación doble</option>
                                 <option>Habitación triple</option>
@@ -235,10 +241,12 @@
                         </div>
                         <div class="form-group">
                             <label for="precio">Precio</label>
-                            <input type="text" class="form-control" id="precio"
+                            <input type="text" class="form-control" id="precio_habitacion"
                                 placeholder="Introduce el precio de la habitación">
                         </div>
-                        <button type="submit" class="btn btn-primary">Enviar</button>
+                        <button type="button" onclick="insertarDatosHabitaciones()"  class="btn btn-primary">Insertar Datos</button>
+                        <button type="button" onclick="actualizarDatosHabitaciones()" class="btn btn-primary">Actualizar Datos</button>
+                        <button type="button" onclick="borrarDatosHabitaciones()" class="btn btn-primary">Borrar por ID</button>
                     </form>
                 </div>
 
@@ -247,29 +255,31 @@
                     <form>
                         <div class="form-group">
                             <label for="idHospitalizacion">ID de Hospitalización</label>
-                            <input type="text" class="form-control" id="idHospitalizacion"
+                            <input type="text" class="form-control" id="id_hospitalizacion"
                                 placeholder="Introduce el ID de Hospitalización">
                         </div>
                         <div class="form-group">
                             <label for="idPaciente">ID de Paciente</label>
-                            <input type="text" class="form-control" id="idPaciente"
+                            <input type="text" class="form-control" id="id_paciente_hospitalizacion"
                                 placeholder="Introduce el ID de Paciente">
                         </div>
 
                         <div class="form-group">
                             <label for="idHabitacion">ID de Habitación</label>
-                            <input type="text" class="form-control" id="idHabitacion"
+                            <input type="text" class="form-control" id="id_habitacion_hospitalizacion"
                                 placeholder="Introduce el ID de Habitación">
                         </div>
                         <div class="form-group">
                             <label for="fechaEntrada">Fecha de Entrada</label>
-                            <input type="date" class="form-control" id="fechaEntrada">
+                            <input type="date" class="form-control" id="fecha_entrada_hospitalizacion">
                         </div>
                         <div class="form-group">
                             <label for="fechaSalida">Fecha de Salida</label>
-                            <input type="date" class="form-control" id="fechaSalida">
+                            <input type="date" class="form-control" id="fecha_salida_hospitalizacion">
                         </div>
-                        <button type="submit" class="btn btn-primary">Enviar</button>
+                        <button type="button" onclick="insertarDatoshospitalizacion()"  class="btn btn-primary">Insertar Datos</button>
+                        <button type="button" onclick="actualizarDatoshospitalizacion()" class="btn btn-primary">Actualizar Datos</button>
+                        <button type="button" onclick="borrarDatoshospitalizacion()" class="btn btn-primary">Borrar por ID</button>
                     </form>
                 </div>
             </div>
@@ -288,6 +298,24 @@
             <table class="table" id="tablacitas">
 
             </table>
+
+            <table class="table" id="tablaexamenes">
+
+            </table>
+
+            <table class="table" id="tablaResultados">
+
+            </table>
+
+            <table class="table" id="tablaHabitaciones">
+
+            </table>
+
+            <table class="table" id="tablahospitalizacion">
+
+            </table>
+
+
 
 
 
